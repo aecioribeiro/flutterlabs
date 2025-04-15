@@ -5,7 +5,7 @@ import 'package:flutterlabs/src/screens/animations/hero_animation_detail.dart';
 import 'package:flutterlabs/src/screens/animations/implicit_animation.dart';
 import 'package:flutterlabs/src/screens/animations/lottie_animation.dart';
 import 'package:flutterlabs/src/screens/animations/physics_animation.dart';
-import 'package:flutterlabs/src/screens/animations_gallery.dart';
+import 'package:flutterlabs/src/screens/animations/animations_gallery.dart';
 import 'package:flutterlabs/src/screens/home_page.dart';
 import 'package:go_router/go_router.dart';
 
