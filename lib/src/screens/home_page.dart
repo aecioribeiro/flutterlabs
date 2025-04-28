@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlabs/l10n/app_intl.dart';
 import 'package:flutterlabs/src/routes/app_routes.dart';
 import 'package:go_router/go_router.dart';
 
@@ -15,9 +16,9 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(22.0),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
-              child: ElevatedButton(
+              child: OutlinedButton(
                 onPressed: () => context.push(path(AppRoutes.animations)),
-                child: const Text("Animations"),
+                child: Text(AppLocalizations.of(context)!.animation_label),
               ),
             ),
           ),
