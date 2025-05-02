@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterlabs/src/theme/app_colors.dart';
 import 'package:flutterlabs/src/theme/app_labels.dart';
@@ -44,5 +45,17 @@ class AppTheme {
     displayLarge: AppLabels.bodyLarge,
     displayMedium: AppLabels.bodyMedium,
     displaySmall: AppLabels.bodySmall,
+  );
+
+  static CupertinoTextThemeData get cupertinoTextTheme => CupertinoTextThemeData(
+    actionSmallTextStyle: AppLabels.bodySmall
+  );
+
+  static CupertinoThemeData get cupertinoMain => CupertinoThemeData(
+    textTheme: AppTheme.cupertinoTextTheme,
+    primaryColor: AppColors.mainColor,
+    brightness: Brightness.dark,
+    primaryContrastingColor: AppColors.fadedTextColor,
+    scaffoldBackgroundColor: AppColors.background
   );
 }

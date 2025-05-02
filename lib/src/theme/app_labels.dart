@@ -59,7 +59,7 @@ class AppLabels {
 
   static TextStyle titleLarge = const TextStyle(
     fontSize: 27,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w900,
     color: AppColors.titleTextColor
   );
 
