@@ -94,7 +94,10 @@ abstract class AppLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('es'),
-    Locale('pt')
+    Locale('en', 'AR'),
+    Locale('pt'),
+    Locale('pt', 'BR'),
+    Locale('es', 'MX')
   ];
 
   /// No description provided for @app_name.
@@ -108,6 +111,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Animations'**
   String get animation_label;
+
+  /// No description provided for @localization_label.
+  ///
+  /// In en, this message translates to:
+  /// **'Localization'**
+  String get localization_label;
+
+  /// No description provided for @localization_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Your investment portfolio'**
+  String get localization_description;
+
+  /// message with number formatted
+  ///
+  /// In en, this message translates to:
+  /// **'Shares: {value}'**
+  String company_shares_total(int value);
+
+  /// message with currency formatted
+  ///
+  /// In en, this message translates to:
+  /// **'Balance: {value}'**
+  String company_shares_value(double value);
+
+  /// A message with a date parameter
+  ///
+  /// In en, this message translates to:
+  /// **'Last update: {date}'**
+  String last_update(DateTime date);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -127,6 +160,21 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
 
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'es': {
+  switch (locale.countryCode) {
+    case 'MX': return AppLocalizationsEsMx();
+   }
+  break;
+   }
+    case 'pt': {
+  switch (locale.countryCode) {
+    case 'BR': return AppLocalizationsPtBr();
+   }
+  break;
+   }
+  }
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {

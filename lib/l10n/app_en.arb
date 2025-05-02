@@ -1,4 +1,42 @@
 {
-    "app_name": "Flutter Labs",
-    "animation_label": "Animations"
+  "app_name": "Flutter Labs",
+  "animation_label": "Animations",
+  "localization_label": "Localization",
+  "localization_description": "Your investment portfolio",
+  "company_shares_total": "Shares: {value}",
+  "@company_shares_total": {
+    "description": "message with number formatted",
+    "placeholders": {
+      "value": {
+        "type": "int",
+        "format": "decimalPattern",
+        "optionalParameters": {
+          "decimalDigits": 0
+        }
+      }
+    }
+  },
+  "company_shares_value": "Balance: {value}",
+  "@company_shares_value": {
+    "description": "message with currency formatted",
+    "placeholders": {
+      "value": {
+        "type": "double",
+        "format": "currency",
+        "optionalParameters": {
+          "decimalDigits": 2
+        }
+      }
+    }
+  },
+  "last_update": "Last update: {date}",
+  "@last_update": {
+    "description": "A message with a date parameter",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  }
 }

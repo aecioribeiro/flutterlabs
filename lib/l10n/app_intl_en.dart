@@ -13,4 +13,37 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get animation_label => 'Animations';
+
+  @override
+  String get localization_label => 'Localization';
+
+  @override
+  String get localization_description => 'Your investment portfolio';
+
+  @override
+  String company_shares_total(int value) {
+    final intl.NumberFormat valueNumberFormat = intl.NumberFormat.decimalPattern(localeName);
+    final String valueString = valueNumberFormat.format(value);
+
+    return 'Shares: $valueString';
+  }
+
+  @override
+  String company_shares_value(double value) {
+    final intl.NumberFormat valueNumberFormat = intl.NumberFormat.currency(
+      locale: localeName,
+      decimalDigits: 2
+    );
+    final String valueString = valueNumberFormat.format(value);
+
+    return 'Balance: $valueString';
+  }
+
+  @override
+  String last_update(DateTime date) {
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMd(localeName);
+    final String dateString = dateDateFormat.format(date);
+
+    return 'Last update: $dateString';
+  }
 }
