@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlabs/l10n/app_intl.dart';
 import 'package:flutterlabs/src/routes/app_routes.dart';
+import 'package:flutterlabs/src/theme/app_labels.dart';
 import 'package:go_router/go_router.dart';
 
 class AnimationsGallery extends StatelessWidget {
@@ -8,7 +10,12 @@ class AnimationsGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          AppLocalizations.of(context)!.animation_label,
+          style: AppLabels.secondaryTitle,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
