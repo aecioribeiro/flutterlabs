@@ -7,11 +7,13 @@ import 'package:flutterlabs/src/screens/animations/lottie_animation.dart';
 import 'package:flutterlabs/src/screens/animations/physics_animation.dart';
 import 'package:flutterlabs/src/screens/animations/animations_gallery.dart';
 import 'package:flutterlabs/src/screens/home_page.dart';
+import 'package:flutterlabs/src/screens/localization/localization_page.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoutes {
   home,
   animations,
+  localizations,
   implicitAnimation,
   explicitAnimation,
   heroAnimation,
@@ -37,6 +39,11 @@ final routing = GoRouter(
       path: path(AppRoutes.animations),
       name: AppRoutes.animations.name,
       builder: (context, state) => const AnimationsGallery(),
+    ),
+    GoRoute(
+      path: path(AppRoutes.localizations),
+      name: AppRoutes.localizations.name,
+      builder: (context, state) => const LocalizationPage(),
     ),
     GoRoute(
       path: path(AppRoutes.implicitAnimation),
