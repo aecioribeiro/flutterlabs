@@ -38,7 +38,7 @@ class LocalizationPageState extends State<LocalizationPage> {
               AppLocalizations.of(context)!.localization_label,
               style: AppLabels.secondaryTitle,
             ),
-            actionsPadding: const EdgeInsets.only(right: 12),
+            actionsPadding: const EdgeInsets.symmetric(horizontal: 12,),
             actions: [
               SizedBox(
                 width: 32,
@@ -183,7 +183,7 @@ class LocalizationPageState extends State<LocalizationPage> {
             ),
             type: ExpandableFabType.up,
             overlayStyle: ExpandableFabOverlayStyle(
-              color: Colors.black87
+              color: Colors.black38
             ),
             distance: 82,
             children: [
@@ -214,7 +214,6 @@ class LocalizationPageState extends State<LocalizationPage> {
                 },
                 backgroundColor: Colors.transparent,
                 shape: CircleBorder(),
-                // child: ,
               ),
               FloatingActionButton.extended(
                 heroTag: "pt_br",
@@ -243,7 +242,6 @@ class LocalizationPageState extends State<LocalizationPage> {
                 },
                 backgroundColor: Colors.transparent,
                 shape: CircleBorder(),
-                // child: ,
               ),
               FloatingActionButton.extended(
                 heroTag: "es",
@@ -273,7 +271,6 @@ class LocalizationPageState extends State<LocalizationPage> {
                 },
                 backgroundColor: Colors.transparent,
                 shape: CircleBorder(),
-                // child: ,
               ),
               FloatingActionButton.extended(
                 heroTag: "es_ar",
@@ -305,7 +302,36 @@ class LocalizationPageState extends State<LocalizationPage> {
                 },
                 backgroundColor: Colors.transparent,
                 shape: CircleBorder(),
-                // child: ,
+              ),
+              FloatingActionButton.extended(
+                heroTag: "ar",
+                extendedPadding: const EdgeInsets.all(0),
+                label: SizedBox(
+                  width: 52,
+                  height: 52,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(26),
+                    child: Flag.fromCode(
+                      FlagsCode.SA,
+                      flagSize: FlagSize.size_1x1,
+                    ),
+                  ),
+                ),
+                onPressed: () {
+                  Intl.defaultLocale = locale.toString();
+                  setState(() {
+                    locale = Locale.fromSubtags(
+                      languageCode: "ar",
+                    );
+                    flagCode = FlagsCode.SA;
+                  });
+                  final state = key.currentState;
+                  if (state != null) {
+                    state.toggle();
+                  }
+                },
+                backgroundColor: Colors.transparent,
+                shape: CircleBorder(),
               ),
             ]
           ),

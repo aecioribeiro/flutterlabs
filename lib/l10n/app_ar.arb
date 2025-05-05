@@ -1,0 +1,42 @@
+{
+  "app_name": "مختبرات Flutter",
+  "animation_label": "رسوم متحركة",
+  "localization_label": "التوطين",
+  "localization_description": "محفظتك الاستثمارية",
+  "company_shares_total": "الأسهم: {value}",
+  "@company_shares_total": {
+    "description": "message with number formatted",
+    "placeholders": {
+      "value": {
+        "type": "int",
+        "format": "decimalPattern",
+        "optionalParameters": {
+          "decimalDigits": 0
+        }
+      }
+    }
+  },
+  "company_shares_value": "الرصيد: {value}",
+  "@company_shares_value": {
+    "description": "message with currency formatted",
+    "placeholders": {
+      "value": {
+        "type": "double",
+        "format": "currency",
+        "optionalParameters": {
+          "decimalDigits": 2
+        }
+      }
+    }
+  },
+  "last_update": "آخر تحديث: {date}",
+  "@last_update": {
+    "description": "A message with a date parameter",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  }
+}

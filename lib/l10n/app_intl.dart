@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_intl_ar.dart';
 import 'app_intl_en.dart';
 import 'app_intl_es.dart';
 import 'app_intl_pt.dart';
@@ -97,6 +98,7 @@ abstract class AppLocalizations {
     Locale('es', 'AR'),
     Locale('pt'),
     Locale('pt', 'BR'),
+    Locale('ar'),
     Locale('es', 'MX')
   ];
 
@@ -152,7 +154,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'es', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'en', 'es', 'pt'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -178,6 +180,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'ar': return AppLocalizationsAr();
     case 'en': return AppLocalizationsEn();
     case 'es': return AppLocalizationsEs();
     case 'pt': return AppLocalizationsPt();
