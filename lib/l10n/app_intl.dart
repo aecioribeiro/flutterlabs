@@ -94,7 +94,7 @@ abstract class AppLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('es'),
-    Locale('en', 'AR'),
+    Locale('es', 'AR'),
     Locale('pt'),
     Locale('pt', 'BR'),
     Locale('es', 'MX')
